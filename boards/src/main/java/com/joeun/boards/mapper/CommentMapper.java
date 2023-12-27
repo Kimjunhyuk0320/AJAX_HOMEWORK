@@ -1,0 +1,26 @@
+package com.joeun.boards.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.joeun.boards.dto.Comment;
+
+@Mapper
+public interface CommentMapper {
+
+  public List<Comment> commentList(Comment comment);
+
+  public Comment select(Integer commentNo);
+
+  public int totalCount(Comment comment);
+
+  public int commentInsert(Comment comment);
+
+  public int commentDelete(Comment comment);
+
+  public int commentUpdate(Comment comment);
+
+  public int maxPk();
+  
+}
